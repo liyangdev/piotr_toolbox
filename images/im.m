@@ -28,8 +28,9 @@ if( nargin<3 || isempty(extraInf)); extraInf=1; end;
 % display image using imagesc
 if(isempty(range)), h=imagesc(I); else h=imagesc(I,range); end
 % set basic and optional properties
-colormap(gray); title(inputname(1)); axis('image');
-if( extraInf ), colorbar; else set(gca,'XTick',[],'YTick',[]); end
+% colormap(gray); title(inputname(1));
+axis('image');
+% if( extraInf ), colorbar; else set(gca,'XTick',[],'YTick',[]); end
 % output h only if output argument explicitly requested
 if(nargout>0), varargout={h}; end
 end

@@ -164,7 +164,8 @@ end
 for i=isA
   iR=isN(i); sz1=round(sz*scales(i)/shrink);
   for j=1:nTypes, ratio=(scales(i)/scales(iR)).^-lambdas(j);
-    data{i,j}=imResampleMex(data{iR,j},sz1(1),sz1(2),ratio); end
+    data{i,j}=imResampleMex(data{iR,j},sz1(1),sz1(2),ratio);
+  end
 end
 
 % smooth channels, optionally pad and concatenate channels
